@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradientMove 3s linear infinite;
+}
+
+body {
+  @apply bg-white text-black;
+}
+
+.dark body {
+  @apply bg-black text-white;
+}
