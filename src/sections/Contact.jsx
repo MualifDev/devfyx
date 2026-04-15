@@ -34,15 +34,15 @@ function Contact() {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_xvr6ruc",
+        "template_xfq8t07",
         {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
           time: new Date().toLocaleString(),
         },
-        "YOUR_PUBLIC_KEY"
+        "QNIMvimxoD5ll6XqW"
       )
       .then(() => {
         setSuccess(true);
