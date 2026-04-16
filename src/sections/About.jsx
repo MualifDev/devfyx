@@ -134,12 +134,12 @@ function About() {
         </div> */}
 
        {/* CLIENT LOGO */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
         <h3 className="text-2xl font-bold mb-10 text-center">
             Trusted By
         </h3>
 
-        {/* <div className="flex flex-wrap justify-center gap-6 opacity-70">
+        <div className="flex flex-wrap justify-center gap-6 opacity-70">
             
             {[
             "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
@@ -163,8 +163,8 @@ function About() {
             </div>
             ))}
 
-        </div> */}
         </div>
+        </div> */}
       </div>
     </section>
   );
