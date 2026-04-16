@@ -2,6 +2,21 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const packages = [
+
+  {
+    name: "Company Profile / Portfolio / Personal Website",
+    price: "FREE 🔥 (Limited Slot)",
+    features: [
+      "1 Landing Page Premium Design",
+      "Fully Responsive (Mobile Friendly)",
+      "Modern UI/UX Design",
+      "Basic SEO Optimization",
+      "Fast Loading Performance ⚡",
+      "Free Consultation",
+      "Free Revisi 1x",
+      "Deploy Online (Bisa diakses publik)",
+    ],
+  },
   {
     name: "Basic",
     price: "Start from Rp 1jt",
