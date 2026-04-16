@@ -145,7 +145,6 @@ function About() {
             "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
             "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
             "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
             "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
             "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
             "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bank_Negara_Indonesia_logo_%282004%29.svg/3840px-Bank_Negara_Indonesia_logo_%282004%29.svg.png",
