@@ -139,7 +139,7 @@ function About() {
             Trusted By
         </h3>
 
-        <div className="flex flex-wrap justify-center gap-6 opacity-70">
+        {/* <div className="flex flex-wrap justify-center gap-6 opacity-70">
             
             {[
             "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
@@ -163,7 +163,7 @@ function About() {
             </div>
             ))}
 
-        </div>
+        </div> */}
         </div>
       </div>
     </section>
