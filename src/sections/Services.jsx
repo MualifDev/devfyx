@@ -38,7 +38,7 @@ const packages = [
 ];
 
 function Services() {
-  const whatsappLink = "https://wa.me/6281234567890"; // ganti nomor lu
+  const whatsappLink = "https://wa.me/6283169821525"; // ganti nomor lu
 
   return (
     <section id="services" className="py-24 px-6 bg-white dark:bg-black">
