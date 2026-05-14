@@ -18,7 +18,7 @@ function Navbar({ dark, setDark }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["home", "about", "services", "contact"];
+      const sections = ["home", "about", "services", "portfolio", "contact"];
       const scrollY = window.scrollY;
 
       sections.forEach((section) => {
@@ -50,6 +50,7 @@ function Navbar({ dark, setDark }) {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
+    { id: "portfolio", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];
 

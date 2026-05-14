@@ -1,150 +1,305 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Zap, Rocket, Building2, Gift, ArrowRight, MessageCircle } from "lucide-react";
 
+// ─── Data ────────────────────────────────────────────────────────────────────
 const packages = [
-
   {
-    name: "Company Profile / Portfolio / Personal Website",
-    price: "FREE 🔥 (Limited Slot)",
+    id: "free",
+    icon: Gift,
+    name: "Gratis",
+    tagline: "Company Profile / Portfolio",
+    price: "FREE",
+    priceNote: "Terbatas — hanya tersisa beberapa slot!",
+    urgent: true,
+    accentFrom: "#f97316",
+    accentTo: "#ef4444",
+    accentClass: "from-orange-500 to-red-500",
+    badgeText: "🔥 LIMITED SLOT",
+    badgeBg: "bg-orange-500",
+    ctaText: "Klaim Sekarang",
+    ctaStyle: "bg-gradient-to-r from-orange-500 to-red-500 text-white",
+    desc: "Cocok untuk UMKM, freelancer, atau bisnis yang baru mulai online. Gratis tanpa syarat tersembunyi.",
     features: [
       "1 Landing Page Premium Design",
       "Fully Responsive (Mobile Friendly)",
       "Modern UI/UX Design",
       "Basic SEO Optimization",
-      "Fast Loading Performance ⚡",
-      "Free Consultation",
+      "Fast Loading Performance",
+      "Free Konsultasi",
       "Free Revisi 1x",
-      "Deploy Online (Bisa diakses publik)",
+      "Deploy Online (bisa diakses publik)",
     ],
   },
   {
+    id: "basic",
+    icon: Zap,
     name: "Basic",
-    price: "Start from Rp 1jt",
+    tagline: "Website Sederhana",
+    price: "Rp 1.000.000",
+    priceNote: "Harga mulai dari",
+    urgent: false,
+    accentFrom: "#3b82f6",
+    accentTo: "#06b6d4",
+    accentClass: "from-blue-500 to-cyan-400",
+    badgeText: null,
+    ctaText: "Pilih Basic",
+    ctaStyle: "bg-gradient-to-r from-blue-500 to-cyan-400 text-white",
+    desc: "Ideal untuk bisnis yang butuh kehadiran online yang cepat, clean, dan profesional.",
     features: [
       "1 Landing Page",
       "Responsive Design",
       "Basic SEO",
       "Fast Performance",
+      "Revisi 2x",
+      "Free Domain .site / .web.id (1 tahun)",
+      "Free Hosting (1 tahun)",
+      "Garansi 30 hari",
     ],
   },
   {
+    id: "pro",
+    icon: Rocket,
     name: "Pro",
-    price: "Start from Rp 2.5jt",
+    tagline: "Website Multi Page",
+    price: "Rp 2.500.000",
+    priceNote: "Harga mulai dari",
+    urgent: false,
     best: true,
+    accentFrom: "#10b981",
+    accentTo: "#3b82f6",
+    accentClass: "from-emerald-400 to-blue-500",
+    badgeText: "⭐ BEST SELLER",
+    badgeBg: "bg-emerald-500",
+    ctaText: "Pilih Pro",
+    ctaStyle: "bg-gradient-to-r from-emerald-400 to-blue-500 text-white",
+    desc: "Untuk bisnis yang serius. Multi halaman, desain custom, dan fitur interaktif lengkap.",
     features: [
-      "Multi Page Website",
-      "Custom Design",
-      "SEO Optimization",
-      "Contact Form / API",
-      "Fast + Secure",
+      "Multi Page Website (up to 8 halaman)",
+      "Custom Design System",
+      "SEO Optimization Lanjutan",
+      "Contact Form + WhatsApp Integration",
+      "Fast + Secure (SSL)",
+      "Revisi 5x",
+      "Free Domain .com (1 tahun)",
+      "Free Hosting Premium (1 tahun)",
+      "Priority Support 3 bulan",
+      "Google Analytics Integration",
     ],
   },
   {
+    id: "enterprise",
+    icon: Building2,
     name: "Enterprise",
-    price: "Custom Price",
+    tagline: "Sistem Custom Full",
+    price: "Custom",
+    priceNote: "Konsultasi gratis terlebih dahulu",
+    urgent: false,
+    accentFrom: "#8b5cf6",
+    accentTo: "#ec4899",
+    accentClass: "from-violet-500 to-pink-500",
+    badgeText: null,
+    ctaText: "Konsultasi Gratis",
+    ctaStyle: "bg-gradient-to-r from-violet-500 to-pink-500 text-white",
+    desc: "Untuk perusahaan yang butuh solusi digital skala besar — dari dashboard, sistem internal, hingga aplikasi.",
     features: [
-      "Full Custom System",
-      "Dashboard / Admin Panel",
-      "API Integration",
+      "Full Custom Web / App System",
+      "Dashboard & Admin Panel",
+      "REST API / Third-party Integration",
       "Scalable Architecture",
-      "Priority Support",
+      "Database Design & Optimization",
+      "Role-based Access Control",
+      "Unlimited Revisi (scope agreed)",
+      "Dedicated Project Manager",
+      "Priority Support 12 bulan",
+      "NDA & Kontrak Resmi",
     ],
   },
 ];
 
-function Services() {
-  const whatsappLink = "https://wa.me/6283169821525"; // ganti nomor lu
+const WA_LINK = "https://wa.me/6283169821525";
+
+// ─── Urgency Pulse Badge ──────────────────────────────────────────────────────
+function UrgencyBadge() {
+  return (
+    <div className="flex items-center gap-2 mb-3">
+      <span className="relative flex h-2.5 w-2.5">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
+        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500" />
+      </span>
+      <span className="text-xs font-semibold text-orange-500 uppercase tracking-widest">
+        Slot hampir habis!
+      </span>
+    </div>
+  );
+}
+
+// ─── Single Pricing Card ──────────────────────────────────────────────────────
+function PricingCard({ pkg, index }) {
+  const Icon = pkg.icon;
 
   return (
-    <section id="services" className="py-24 px-6 bg-white dark:bg-black">
-      <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`relative flex flex-col rounded-2xl overflow-hidden
+        ${pkg.best
+          ? "ring-2 ring-emerald-400/60 dark:ring-emerald-400/40 shadow-2xl shadow-emerald-500/10"
+          : "ring-1 ring-zinc-200 dark:ring-zinc-800 shadow-lg"
+        }
+        bg-white dark:bg-zinc-900
+      `}
+    >
+      {/* Top gradient bar */}
+      <div className={`h-1 w-full bg-gradient-to-r ${pkg.accentClass}`} />
 
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold">
-            Pricing{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-              Packages
-            </span>
-          </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">
-            Choose the best package for your business growth.
+      {/* Badge */}
+      {pkg.badgeText && (
+        <div className={`absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full text-white ${pkg.badgeBg || "bg-zinc-700"} shadow-md`}>
+          {pkg.badgeText}
+        </div>
+      )}
+
+      <div className="p-7 flex flex-col flex-1">
+
+        {/* Icon + name */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${pkg.accentClass} flex items-center justify-center shadow-md`}>
+            <Icon size={18} className="text-white" />
+          </div>
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+              {pkg.tagline}
+            </p>
+            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-tight">
+              {pkg.name}
+            </h3>
+          </div>
+        </div>
+
+        {/* Urgency */}
+        {pkg.urgent && <UrgencyBadge />}
+
+        {/* Price */}
+        <div className="mb-3">
+          <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mb-0.5">{pkg.priceNote}</p>
+          <p className={`text-3xl font-extrabold bg-gradient-to-r ${pkg.accentClass} bg-clip-text text-transparent`}>
+            {pkg.price}
           </p>
         </div>
 
-        {/* CARD */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {packages.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.08, rotate: item.best ? 0 : -1 }}
-              transition={{ delay: i * 0.2 }}
-              className={`relative p-[1px] rounded-2xl ${
-                item.best
-                  ? "bg-gradient-to-r from-green-400 to-blue-400"
-                  : "bg-gradient-to-r from-blue-400 to-green-400"
-              }`}
-            >
-              {/* INNER */}
-              <div className="p-8 rounded-2xl bg-white dark:bg-black h-full relative overflow-hidden group">
+        {/* Desc */}
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-5 leading-relaxed">
+          {pkg.desc}
+        </p>
 
-                {/* 🔥 GLOW */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-400/20 to-green-400/20 blur-2xl"></div>
+        {/* Divider */}
+        <div className="h-px bg-zinc-100 dark:bg-zinc-800 mb-5" />
 
-                {/* BEST SELLER */}
-                {item.best && (
-                  <div className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full bg-green-400 text-black font-semibold">
-                    BEST SELLER
-                  </div>
-                )}
+        {/* Features */}
+        <ul className="space-y-2.5 mb-7 flex-1">
+          {pkg.features.map((f, idx) => (
+            <li key={idx} className="flex items-start gap-2.5 text-sm text-zinc-600 dark:text-zinc-300">
+              <span className={`mt-0.5 shrink-0 w-4 h-4 rounded-full bg-gradient-to-br ${pkg.accentClass} flex items-center justify-center`}>
+                <Check size={10} className="text-white" strokeWidth={3} />
+              </span>
+              {f}
+            </li>
+          ))}
+        </ul>
 
-                {/* CONTENT */}
-                <div className="relative z-10">
+        {/* CTA */}
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${pkg.ctaText} — DevFyx paket ${pkg.name}`}
+          className={`group flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold
+            transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]
+            shadow-md ${pkg.ctaStyle}`}
+        >
+          <MessageCircle size={15} />
+          {pkg.ctaText}
+          <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </a>
 
-                  {/* TITLE */}
-                  <h3 className="text-xl font-semibold mb-2">
-                    {item.name}
-                  </h3>
+      </div>
+    </motion.div>
+  );
+}
 
-                  {/* PRICE */}
-                  <p className="text-lg font-bold text-green-400 mb-4">
-                    {item.price}
-                  </p>
+// ─── Main Section ─────────────────────────────────────────────────────────────
+export default function Services() {
+  return (
+    <section
+      id="services"
+      className="relative py-24 px-6 overflow-hidden bg-gray-50 dark:bg-zinc-950"
+    >
+      {/* Background texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(99,102,241,0.08) 1px, transparent 1px)`,
+          backgroundSize: "28px 28px",
+        }}
+      />
 
-                  {/* FEATURES */}
-                  <ul className="space-y-2 mb-6">
-                    {item.features.map((f, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-                        <Check size={16} className="text-green-400" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
+      {/* Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px]
+        bg-gradient-to-b from-blue-500/10 to-transparent blur-3xl pointer-events-none" />
 
-                  {/* CTA */}
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    className={`block text-center px-4 py-2 rounded-full text-sm font-medium transition ${
-                      item.best
-                        ? "bg-green-400 text-black hover:opacity-90"
-                        : "bg-gradient-to-r from-blue-400 to-green-400 text-white hover:opacity-90"
-                    }`}
-                  >
-                    Choose Package
-                  </a>
+      <div className="relative max-w-7xl mx-auto">
 
-                </div>
-              </div>
-            </motion.div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-14"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-500 mb-3">
+            Layanan & Harga
+          </p>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100">
+            Paket{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              Harga Kami
+            </span>
+          </h2>
+          <p className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto text-sm md:text-base">
+            Transparan, terjangkau, dan disesuaikan dengan kebutuhan bisnis kamu — dari skala kecil hingga enterprise.
+          </p>
+        </motion.div>
+
+        {/* Grid — 2 col on md, 4 col on xl */}
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          {packages.map((pkg, i) => (
+            <PricingCard key={pkg.id} pkg={pkg} index={i} />
           ))}
         </div>
+
+        {/* Bottom note */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="text-center text-xs text-zinc-400 dark:text-zinc-600 mt-10"
+        >
+          Semua paket sudah termasuk konsultasi awal gratis. Punya kebutuhan khusus?{" "}
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline font-medium"
+          >
+            Hubungi kami langsung →
+          </a>
+        </motion.p>
 
       </div>
     </section>
   );
 }
-
-export default Services;

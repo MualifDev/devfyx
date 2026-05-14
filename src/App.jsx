@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Portfolio from "./sections/Portfolio";
 
 function App() {
   // ✅ default DARK kalau belum ada setting
@@ -28,6 +29,7 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Portfolio /> 
       <Contact />
       <Footer />
     </MainLayout>
