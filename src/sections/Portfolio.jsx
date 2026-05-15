@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { X, ExternalLink, ArrowUpRight } from "lucide-react";
 import fashionShop from "../assets/portofolio-fasshionshop.png";
+import fashionShopVideo from "../assets/fashion-store-ads.mp4";
 import coffeeShop from "../assets/portofolio-coffeeshop.png";
 import bakery from "../assets/portofolio-bakery-ecommerce.png";
 
@@ -13,7 +14,7 @@ const projectsData = [
     title: "Fashion Shop web app",
     category: "web",
     image: fashionShop,       // ← ganti nama file
-    video: "../assets/nusantara-corp.mp4",       // ← ganti nama file (opsional)
+    video: fashionShopVideo,       // ← ganti nama file (opsional)
     desc: "Web app fashion modern dengan tampilan premium, animasi interaktif, dan pengalaman belanja yang responsif untuk meningkatkan branding serta konversi penjualan.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     year: "2026",
