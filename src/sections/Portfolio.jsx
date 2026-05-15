@@ -1,71 +1,84 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { X, ExternalLink, ArrowUpRight } from "lucide-react";
+import fashionShop from "../assets/portofolio-fasshionshop.png";
+import coffeeShop from "../assets/portofolio-coffeeshop.png";
+import bakery from "../assets/portofolio-bakery-ecommerce.png";
 
 // ============================================================
 // DATA — Ganti nilai image/video sesuai file di folder /public
 // ============================================================
 const projectsData = [
   {
-    title: "Nusantara Corp",
+    title: "Fashion Shop web app",
     category: "web",
-    image: "/assets/fasshion-shop.png",       // ← ganti nama file
-    video: "/assets/nusantara-corp.mp4",       // ← ganti nama file (opsional)
-    desc: "Website company profile modern dengan animasi scroll dan desain yang clean untuk perusahaan konsultan.",
+    image: fashionShop,       // ← ganti nama file
+    video: "../assets/nusantara-corp.mp4",       // ← ganti nama file (opsional)
+    desc: "Web app fashion modern dengan tampilan premium, animasi interaktif, dan pengalaman belanja yang responsif untuk meningkatkan branding serta konversi penjualan.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    year: "2024",
+    year: "2026",
     link: "#",
   },
   {
-    title: "LandingPro",
+    title: "Coffee Shop Landing Page",
     category: "web",
-    image: "/projects/landingpro.jpg",
-    video: "/projects/landingpro.mp4",
-    desc: "Landing page produk SaaS dengan konversi tinggi, A/B tested, dan animasi interaktif.",
+    image: coffeeShop,       // ← ganti nama file
+    video: "../assets/coffeeshop.mp4",       // ← ganti nama file (opsional)
+    desc: "Web app coffee shop modern dengan desain elegan, menu interaktif, dan nuansa premium untuk menghadirkan pengalaman digital yang hangat dan menarik bagi pelanggan.",
     tech: ["Next.js", "GSAP", "Sass"],
-    year: "2024",
+    year: "2026",
     link: "#",
   },
   {
-    title: "TaskFlow",
-    category: "app",
-    image: "/projects/taskflow.jpg",
-    video: "/projects/taskflow.mp4",
-    desc: "Aplikasi manajemen tugas fullstack dengan fitur real-time collaboration dan role-based access.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-    year: "2023",
+    title: "Bakery E-commerce",
+    category: "web",
+    image: bakery,       // ← ganti nama file
+    video: "../assets/bakery-ecommerce.mp4",       // ← ganti nama file (opsional)
+    desc: "Platform e-commerce untuk toko kue dengan desain menarik, fitur checkout yang mudah, dan integrasi payment gateway.Platform ecommerce bakery modern dengan tampilan manis dan elegan, dilengkapi katalog produk interaktif serta pengalaman pemesanan online yang cepat dan nyaman.",
+    tech: ["React", "Node.js", "MongoDB"],
+    year: "2026",
     link: "#",
-  },
-  {
-    title: "ShopEase",
-    category: "app",
-    image: "/projects/shopease.jpg",
-    video: "/projects/shopease.mp4",
-    desc: "Platform e-commerce mobile-first dengan integrasi payment gateway dan dashboard admin.",
-    tech: ["React Native", "Firebase", "Redux"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Zenith Design System",
-    category: "design",
-    image: "/projects/zenith-ds.jpg",
-    video: "/projects/zenith-ds.mp4",
-    desc: "Design system lengkap dengan komponen reusable, token warna, dan dokumentasi interaktif.",
-    tech: ["Figma", "Storybook", "CSS Tokens"],
-    year: "2023",
-    link: "#",
-  },
-  {
-    title: "FinTrack UI/UX",
-    category: "uiux",
-    image: "/projects/fintrack.jpg",
-    video: "/projects/fintrack.mp4",
-    desc: "Redesign aplikasi keuangan personal dengan fokus pada clarity data dan kemudahan navigasi.",
-    tech: ["Figma", "Prototyping", "User Research"],
-    year: "2024",
-    link: "#",
-  },
+  }
+  // {
+  //   title: "TaskFlow",
+  //   category: "app",
+  //   image: "/projects/taskflow.jpg",
+  //   video: "/projects/taskflow.mp4",
+  //   desc: "Aplikasi manajemen tugas fullstack dengan fitur real-time collaboration dan role-based access.",
+  //   tech: ["MongoDB", "Express", "React", "Node.js"],
+  //   year: "2023",
+  //   link: "#",
+  // },
+  // {
+  //   title: "ShopEase",
+  //   category: "app",
+  //   image: "/projects/shopease.jpg",
+  //   video: "/projects/shopease.mp4",
+  //   desc: "Platform e-commerce mobile-first dengan integrasi payment gateway dan dashboard admin.",
+  //   tech: ["React Native", "Firebase", "Redux"],
+  //   year: "2024",
+  //   link: "#",
+  // },
+  // {
+  //   title: "Zenith Design System",
+  //   category: "design",
+  //   image: "/projects/zenith-ds.jpg",
+  //   video: "/projects/zenith-ds.mp4",
+  //   desc: "Design system lengkap dengan komponen reusable, token warna, dan dokumentasi interaktif.",
+  //   tech: ["Figma", "Storybook", "CSS Tokens"],
+  //   year: "2023",
+  //   link: "#",
+  // },
+  // {
+  //   title: "FinTrack UI/UX",
+  //   category: "uiux",
+  //   image: "/projects/fintrack.jpg",
+  //   video: "/projects/fintrack.mp4",
+  //   desc: "Redesign aplikasi keuangan personal dengan fokus pada clarity data dan kemudahan navigasi.",
+  //   tech: ["Figma", "Prototyping", "User Research"],
+  //   year: "2024",
+  //   link: "#",
+  // },
 ];
 
 const FILTERS = [
