@@ -52,8 +52,8 @@ const CONTACTS = [
   {
     icon: Mail,
     label: "Email",
-    value: "devfyx@gmail.com",        // ← sesuaikan
-    href: "mailto:devfyx@gmail.com",
+    value: "mualif2310@gmail.com",        // ← sesuaikan
+    href: "mailto:mualif2310@gmail.com",
   },
   {
     icon: MapPin,
@@ -85,7 +85,7 @@ const SOCIALS = [
   {
     icon: LinkedinIcon,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/devfyx",  // ← sesuaikan
+    href: "https://www.linkedin.com/in/mualif-kamaludin-963469264/",  // ← sesuaikan
     hoverColor: "hover:bg-blue-600 hover:text-white hover:border-blue-500",
   },
 ];

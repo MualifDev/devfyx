@@ -6,6 +6,7 @@ import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import Portfolio from "./sections/Portfolio";
+import Testimonials from "./sections/Testimonials";
 
 function App() {
   // ✅ default DARK kalau belum ada setting
@@ -30,6 +31,7 @@ function App() {
       <About />
       <Services />
       <Portfolio /> 
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </MainLayout>

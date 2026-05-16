@@ -5,6 +5,7 @@ import fashionShop from "../assets/portofolio-fasshionshop.png";
 import fashionShopVideo from "../assets/fashion-store-ads.mp4";
 import coffeeShop from "../assets/portofolio-coffeeshop.png";
 import bakery from "../assets/portofolio-bakery-ecommerce.png";
+import coffeshop from "../assets/portofolio-coffee-shop.mp4";
 
 // ============================================================
 // DATA — Ganti nilai image/video sesuai file di folder /public
@@ -24,7 +25,7 @@ const projectsData = [
     title: "Coffee Shop Landing Page",
     category: "web",
     image: coffeeShop,       // ← ganti nama file
-    video: "../assets/coffeeshop.mp4",       // ← ganti nama file (opsional)
+    video: coffeshop,       // ← ganti nama file (opsional)
     desc: "Web app coffee shop modern dengan desain elegan, menu interaktif, dan nuansa premium untuk menghadirkan pengalaman digital yang hangat dan menarik bagi pelanggan.",
     tech: ["Next.js", "GSAP", "Sass"],
     year: "2026",

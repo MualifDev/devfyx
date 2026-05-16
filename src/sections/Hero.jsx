@@ -160,7 +160,7 @@ export default function Hero() {
         <StatCard
           icon={Zap}
           label="Projects Delivered"
-          value={50}
+          value={20}
           suffix="+"
           delay={1.0}
           className="left-[4%] top-[28%]"

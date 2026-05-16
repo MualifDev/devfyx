@@ -8,9 +8,9 @@ import {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const STATS = [
-  { end: 50,  suffix: "+", label: "Project Selesai",  color: "from-blue-500 to-cyan-400" },
-  { end: 20,  suffix: "+", label: "Klien Puas",       color: "from-emerald-500 to-teal-400" },
-  { end: 2,   suffix: "+", label: "Tahun Berpengalaman", color: "from-violet-500 to-blue-400" },
+  { end: 20,  suffix: "+", label: "Project Selesai",  color: "from-blue-500 to-cyan-400" },
+  { end: 10,  suffix: "+", label: "Klien Puas",       color: "from-emerald-500 to-teal-400" },
+  { end: 1,   suffix: "+", label: "Tahun Berpengalaman", color: "from-violet-500 to-blue-400" },
   { end: 100, suffix: "%", label: "Komitmen Quality", color: "from-orange-500 to-amber-400" },
 ];
 
@@ -27,17 +27,17 @@ const TECH_STACK = [
 
 const TIMELINE = [
   {
-    year: "2023",
+    year: "2025",
     title: "DevFyx Berdiri",
     desc: "Dimulai dari proyek freelance kecil-kecilan, fokus pada pembuatan website untuk UMKM lokal.",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "Berkembang & Skala",
     desc: "Mulai menangani klien lebih besar, membangun tim kecil, dan memperluas layanan ke aplikasi fullstack.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Full Digital Studio",
     desc: "DevFyx resmi menjadi studio digital lengkap — dari UI/UX, web app, hingga solusi sistem enterprise.",
   },

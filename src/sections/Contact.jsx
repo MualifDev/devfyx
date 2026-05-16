@@ -50,8 +50,8 @@ const INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "devfyx@gmail.com",        // ← sesuaikan
-    href: "mailto:devfyx@gmail.com",
+    value: "mualif2310@gmail.com",        // ← sesuaikan
+    href: "mailto:mualif23103@gmail.com",
   },
   {
     icon: MessageCircle,
@@ -74,9 +74,9 @@ const INFO = [
 ];
 
 const SOCIALS = [
-  { icon: InstagramIcon, href: "#", label: "Instagram DevFyx" },
-  { icon: GitBranch,     href: "#", label: "GitHub DevFyx" },
-  { icon: LinkedinIcon,  href: "#", label: "LinkedIn DevFyx" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/mualif.dev/", label: "Instagram DevFyx" },
+  { icon: GitBranch,     href: "https://github.com/MualifDev", label: "GitHub DevFyx" },
+  { icon: LinkedinIcon,  href: "https://www.linkedin.com/in/mualif-kamaludin-963469264/", label: "LinkedIn DevFyx" },
 ];
 
 // ─── Inline field component ───────────────────────────────────────────────────
