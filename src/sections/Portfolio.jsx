@@ -6,6 +6,12 @@ import fashionShopVideo from "../assets/fashion-store-ads.mp4";
 import coffeeShop from "../assets/portofolio-coffeeshop.png";
 import bakery from "../assets/portofolio-bakery-ecommerce.png";
 import coffeshop from "../assets/portofolio-coffee-shop.mp4";
+import furniture from "../assets/furniture-store.png";
+import furnitureVideo from "../assets/furniture.mp4";
+import konstruksi from "../assets/konstruksi.png";
+import konstruksiVideo from "../assets/konstruksi.mp4";
+
+
 
 // ============================================================
 // DATA — Ganti nilai image/video sesuai file di folder /public
@@ -40,27 +46,27 @@ const projectsData = [
     tech: ["React", "Node.js", "MongoDB"],
     year: "2026",
     link: "#",
+  },
+  {
+    title: "Furniture Store Web App",
+    category: "web",
+    image: furniture,
+    video: furnitureVideo,
+    desc: "MabelFurniture menghadirkan furniture modern dengan desain elegan, minimalis, dan berkualitas tinggi untuk menciptakan hunian yang nyaman dan berkelas.",
+    tech: ["React", "Node.js", "MongoDB"],
+    year: "2026",
+    link: "#",
+  },
+  {
+    title: "Konstruksi Web App",
+    category: "web",
+    image: konstruksi,
+    video: konstruksiVideo,
+    desc: "Kami menghadirkan layanan konstruksi profesional untuk pembangunan rumah, gedung, dan berbagai proyek infrastruktur dengan kualitas terbaik, pengerjaan tepat waktu, serta desain modern yang sesuai kebutuhan Anda.",
+    tech: ["Next.js", "Firebase", "Redux"],
+    year: "2026",
+    link: "#",
   }
-  // {
-  //   title: "TaskFlow",
-  //   category: "app",
-  //   image: "/projects/taskflow.jpg",
-  //   video: "/projects/taskflow.mp4",
-  //   desc: "Aplikasi manajemen tugas fullstack dengan fitur real-time collaboration dan role-based access.",
-  //   tech: ["MongoDB", "Express", "React", "Node.js"],
-  //   year: "2023",
-  //   link: "#",
-  // },
-  // {
-  //   title: "ShopEase",
-  //   category: "app",
-  //   image: "/projects/shopease.jpg",
-  //   video: "/projects/shopease.mp4",
-  //   desc: "Platform e-commerce mobile-first dengan integrasi payment gateway dan dashboard admin.",
-  //   tech: ["React Native", "Firebase", "Redux"],
-  //   year: "2024",
-  //   link: "#",
-  // },
   // {
   //   title: "Zenith Design System",
   //   category: "design",
