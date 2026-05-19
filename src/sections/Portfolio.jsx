@@ -6,11 +6,12 @@ import fashionShopVideo from "../assets/fashion-store-ads.mp4";
 import coffeeShop from "../assets/portofolio-coffeeshop.png";
 import bakery from "../assets/portofolio-bakery-ecommerce.png";
 import coffeshop from "../assets/portofolio-coffee-shop.mp4";
-import furniture from "../assets/furniture-store.png";
+import furniture from "../assets/furniture.png";
 import furnitureVideo from "../assets/furniture.mp4";
 import konstruksi from "../assets/konstruksi.png";
 import konstruksiVideo from "../assets/konstruksi.mp4";
-
+import shoes from "../assets/shoes-store.png";
+import shoesVideo from "../assets/shoes-store.mp4";
 
 
 // ============================================================
@@ -52,7 +53,7 @@ const projectsData = [
     category: "web",
     image: furniture,
     video: furnitureVideo,
-    desc: "MabelFurniture menghadirkan furniture modern dengan desain elegan, minimalis, dan berkualitas tinggi untuk menciptakan hunian yang nyaman dan berkelas.",
+    desc: "MabelFurniture Web App menghadirkan furniture modern dengan desain elegan, minimalis, dan berkualitas tinggi untuk menciptakan hunian yang nyaman dan berkelas.",
     tech: ["React", "Node.js", "MongoDB"],
     year: "2026",
     link: "#",
@@ -62,21 +63,21 @@ const projectsData = [
     category: "web",
     image: konstruksi,
     video: konstruksiVideo,
-    desc: "Kami menghadirkan layanan konstruksi profesional untuk pembangunan rumah, gedung, dan berbagai proyek infrastruktur dengan kualitas terbaik, pengerjaan tepat waktu, serta desain modern yang sesuai kebutuhan Anda.",
+    desc: "Web konstruksi profesional untuk pembangunan rumah, gedung, dan berbagai proyek infrastruktur dengan kualitas terbaik, pengerjaan tepat waktu, serta desain modern yang sesuai kebutuhan Anda.",
     tech: ["Next.js", "Firebase", "Redux"],
     year: "2026",
     link: "#",
-  }
-  // {
-  //   title: "Zenith Design System",
-  //   category: "design",
-  //   image: "/projects/zenith-ds.jpg",
-  //   video: "/projects/zenith-ds.mp4",
-  //   desc: "Design system lengkap dengan komponen reusable, token warna, dan dokumentasi interaktif.",
-  //   tech: ["Figma", "Storybook", "CSS Tokens"],
-  //   year: "2023",
-  //   link: "#",
-  // },
+  },
+  {
+    title: "Ecommerce shoes store web app",
+    category: "web",
+    image: shoes,
+    video: shoesVideo,
+    desc: "Platform e-commerce untuk toko sepatu dengan desain menarik, fitur checkout yang mudah, dan integrasi payment gateway.",
+    tech: ["React", "Node.js", "PostgreSQL"],
+    year: "2025",
+    link: "#",
+  },
   // {
   //   title: "FinTrack UI/UX",
   //   category: "uiux",
