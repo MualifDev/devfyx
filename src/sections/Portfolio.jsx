@@ -12,50 +12,27 @@ import konstruksi from "../assets/konstruksi.png";
 import konstruksiVideo from "../assets/konstruksi.mp4";
 import shoes from "../assets/shoes-store.png";
 import shoesVideo from "../assets/shoes-store.mp4";
+import fruit from "../assets/fruit.png";
+import fruitVideo from "../assets/fruit.mp4";
+import portofolio from "../assets/portofolio.png";
+import portofolioVideo from "../assets/portofolio.mp4";
+import bookingHotel from "../assets/booking-hotel.png";
+import bookingHotelVideo from "../assets/booking-hotel.mp4";
 
 
 // ============================================================
 // DATA — Ganti nilai image/video sesuai file di folder /public
 // ============================================================
 const projectsData = [
+  
   {
-    title: "Fashion Shop web app",
+    title: "Fruit Shop Web App",
     category: "web",
-    image: fashionShop,       // ← ganti nama file
-    video: fashionShopVideo,       // ← ganti nama file (opsional)
-    desc: "Web app fashion modern dengan tampilan premium, animasi interaktif, dan pengalaman belanja yang responsif untuk meningkatkan branding serta konversi penjualan.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    year: "2026",
-    link: "#",
-  },
-  {
-    title: "Coffee Shop Landing Page",
-    category: "web",
-    image: coffeeShop,       // ← ganti nama file
-    video: coffeshop,       // ← ganti nama file (opsional)
-    desc: "Web app coffee shop modern dengan desain elegan, menu interaktif, dan nuansa premium untuk menghadirkan pengalaman digital yang hangat dan menarik bagi pelanggan.",
-    tech: ["Next.js", "GSAP", "Sass"],
-    year: "2026",
-    link: "#",
-  },
-  {
-    title: "Bakery E-commerce",
-    category: "web",
-    image: bakery,       // ← ganti nama file
-    video: "../assets/bakery-ecommerce.mp4",       // ← ganti nama file (opsional)
-    desc: "Platform e-commerce untuk toko kue dengan desain menarik, fitur checkout yang mudah, dan integrasi payment gateway.Platform ecommerce bakery modern dengan tampilan manis dan elegan, dilengkapi katalog produk interaktif serta pengalaman pemesanan online yang cepat dan nyaman.",
-    tech: ["React", "Node.js", "MongoDB"],
-    year: "2026",
-    link: "#",
-  },
-  {
-    title: "Furniture Store Web App",
-    category: "web",
-    image: furniture,
-    video: furnitureVideo,
-    desc: "MabelFurniture Web App menghadirkan furniture modern dengan desain elegan, minimalis, dan berkualitas tinggi untuk menciptakan hunian yang nyaman dan berkelas.",
-    tech: ["React", "Node.js", "MongoDB"],
-    year: "2026",
+    image: fruit,
+    video: fruitVideo,
+    desc: "Platform e-commerce untuk toko buah dengan desain menarik, fitur checkout yang mudah, dan integrasi payment gateway.",
+    tech: ["React", "Node.js", "PostgreSQL"],
+    year: "2025",
     link: "#",
   },
   {
@@ -78,16 +55,66 @@ const projectsData = [
     year: "2025",
     link: "#",
   },
-  // {
-  //   title: "FinTrack UI/UX",
-  //   category: "uiux",
-  //   image: "/projects/fintrack.jpg",
-  //   video: "/projects/fintrack.mp4",
-  //   desc: "Redesign aplikasi keuangan personal dengan fokus pada clarity data dan kemudahan navigasi.",
-  //   tech: ["Figma", "Prototyping", "User Research"],
-  //   year: "2024",
-  //   link: "#",
-  // },
+  {
+    title: "Portofolio web app",
+    category: "web",
+    image: portofolio,      
+    video: portofolioVideo,      
+    desc: "Web portofolio profesional untuk menampilkan karya dan pengalaman Anda.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    link: "#"
+  },
+  {
+    title: "Booking Hotel web app",
+    category: "web",
+    image: bookingHotel,      
+    video: bookingHotelVideo,      
+    desc: "Web app booking hotel modern dengan tampilan premium, fitur pencarian yang mudah, dan pengalaman reservasi yang responsif untuk meningkatkan branding serta konversi penjualan.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    link: "#",
+  },
+  {
+    title: "Fashion Shop web app",
+    category: "web",
+    image: fashionShop,       
+    video: fashionShopVideo,       
+    desc: "Web app fashion modern dengan tampilan premium, animasi interaktif, dan pengalaman belanja yang responsif untuk meningkatkan branding serta konversi penjualan.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    link: "#",
+  },
+  {
+    title: "Coffee Shop Landing Page",
+    category: "web",
+    image: coffeeShop,      
+    video: coffeshop,       
+    desc: "Web app coffee shop modern dengan desain elegan, menu interaktif, dan nuansa premium untuk menghadirkan pengalaman digital yang hangat dan menarik bagi pelanggan.",
+    tech: ["Next.js", "GSAP", "Sass"],
+    year: "2026",
+    link: "#",
+  },
+  {
+    title: "Bakery E-commerce",
+    category: "web",
+    image: bakery,      
+    video: "../assets/bakery-ecommerce.mp4",       
+    desc: "Platform e-commerce untuk toko kue dengan desain menarik, fitur checkout yang mudah, dan integrasi payment gateway.Platform ecommerce bakery modern dengan tampilan manis dan elegan, dilengkapi katalog produk interaktif serta pengalaman pemesanan online yang cepat dan nyaman.",
+    tech: ["React", "Node.js", "MongoDB"],
+    year: "2026",
+    link: "#",
+  },
+  {
+    title: "Furniture Store Web App",
+    category: "web",
+    image: furniture,
+    video: furnitureVideo,
+    desc: "MabelFurniture Web App menghadirkan furniture modern dengan desain elegan, minimalis, dan berkualitas tinggi untuk menciptakan hunian yang nyaman dan berkelas.",
+    tech: ["React", "Node.js", "MongoDB"],
+    year: "2026",
+    link: "#",
+  }
 ];
 
 const FILTERS = [
